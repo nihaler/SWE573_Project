@@ -1,6 +1,10 @@
 
 This project enables to analyze tweets via using Twitter API within the scope of SWE573-Software Development Practice course of Software Engineering Master Program at Bogaziçi University.
 
+Deployed Version:
+
+https://nihaler.pythonanywhere.com/markbis/welcome/intro
+
 ***
 
 [![Capture.jpg](https://i.postimg.cc/FzT0c7fF/Capture.jpg)](https://postimg.cc/Pv8Lnfz0)
