@@ -11,7 +11,7 @@ This project enables to analyze tweets via using Twitter API within the scope of
 
 People are leaving digital traces by using social media platforms such as Facabook, Instagram, Twitter and so on. When these digital traces are processed, they may turn into meaningful information for marketers. And, this project has been designed for reaching the right customer target for marketing campaign activities based on twitter communication data.
 
-**markbis** will help marketers to easily reach the targeted market, and the top influencers, as a result they will be able to make customer specific marketing.
+**markbis** will help marketers to easily reach the targeted market, and the top influencing topic keys, as a result they will be able to make customer specific marketing.
 
 ***
 
