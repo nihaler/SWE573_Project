@@ -14,15 +14,6 @@ People are leaving digital traces by using social media platforms such as Facabo
 **markbis** will help marketers to easily reach the targeted market, and the top influencing topic keys, as a result they will be able to make customer specific marketing.
 
 ***
-
-### :memo: A Quick Overview
-
-#### :arrow_right: Welcome Page
-
-
-#### :arrow_right: xx screen
-
-***
 ### :bar_chart: Project Management
 
 MS Project is used for the purposes such as time-tracking, project planning, resource planning etc. The general project plan will be in the MS Project Office
