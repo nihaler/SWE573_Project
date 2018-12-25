@@ -25,21 +25,15 @@ People are leaving digital traces by using social media platforms such as Facabo
 ***
 ### :bar_chart: Project Management
 
-MS Project is used for the purposes such as time-tracking, project planning, resource planning etc. The general project plan will be as follows;
-
-(photo)
-
+MS Project is used for the purposes such as time-tracking, project planning, resource planning etc. The general project plan will be in the MS Project Office
 
 You may find all details in the Wiki.
 
 ***
 ### :package: Tools
 **Python** as the primary language <br>
-**??** as en embedded DBMS <br>
-
-
-***
-### :pushpin: References
+**SQlite** as en embedded DBMS <br>
+**Web2py** for the UI  <br>
 
 ***
 
