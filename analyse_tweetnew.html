@@ -1,0 +1,70 @@
+{{extend 'layout.html'}}
+{{block header}}
+<center style="background-color: #333; color:white; padding:30px">
+  <h1> My Search Analysis
+  <p><img src="https://i.postimg.cc/9fgn8zmh/5bb714eb9ecb0f1f971a768d.png" alt="markbis" style="float:right;width:400px;height:400px;" controls /></p>
+</center>
+{{end}}
+
+<h4 style="color:SlateBlue;"> Your tweets have been analysed </h4>
+<table style="width:60%">
+  <tr>
+    <th> </th>
+    <th> #of tweets </th>
+    <th>Key1: {{=key1}}</th>
+    <th>Key2: {{=key2}}</th>
+    <th>Key3: {{=key3}}</th>
+  </tr>
+  <tr>
+    <th>{{=aim1}}</th>
+    <td>{{=aim1_count}}</b> tweets contain {{=aim1}} </td>
+    <td>{{=aim1_key1_count}}</b> tweets contain {{=aim1}} and {{=key1}}  </td>
+    <td>{{=aim1_key2_count}}</b> tweets contain {{=aim1}} and {{=key2}}  </td>
+    <td>{{=aim1_key3_count}}</b> tweets contain {{=aim1}} and {{=key3}}  </td>
+  </tr>
+  <tr>
+    <th>{{=aim2}}</th>
+    <td>{{=aim2_count}}</b> tweets contain {{=aim2}}</td>
+    <td>{{=aim2_key1_count}}</b> tweets contain {{=aim2}} and {{=key1}}  </td>
+    <td>{{=aim2_key2_count}}</b> tweets contain {{=aim2}} and {{=key2}}  </td>
+    <td>{{=aim2_key3_count}}</b> tweets contain {{=aim2}} and {{=key3}}  </td>
+  </tr>
+</table>
+
+
+
+
+<script src="{{=URL('static','js/RGraph.common.core.js')}}"></script>
+<script src="{{=URL('static','js/RGraph.common.dynamic.js')}}"></script>
+<script src="{{=URL('static','js/RGraph.common.key.js')}}"></script>
+<script src="{{=URL('static','js/RGraph.common.tooltips.js')}}"></script>
+<script src="{{=URL('static','js/RGraph.drawing.rect.js')}}"></script>
+<script src="{{=URL('static','js/RGraph.line.js')}}"></script>
+<script src="{{=URL('static','js/RGraph.pie.js')}}"></script>
+<!--[if lt IE 9]><script src="{{=URL('static','js/excanvas.js')}}"></script><![endif]-->
+
+<canvas id="monthly" width="450" height="50" style="border: 0px solid gray">[No canvas support]</canvas>
+
+<div style="position: relative">
+	<canvas id="My Search Analysis" width="700" height="250">[No canvas support]</canvas>
+</div>
+
+<script>
+	window.onload = function ()
+	{
+		var line_sale_order = new RGraph.Line('My Search Analysis', [ {{=aim1_count}}, {{=aim2_count}}, {{=keyword1_count}}, {{=keyword2_count}}, {{=keyword3_count}} ] )
+            .Set('labels', [ 'Aim:{{=aim1}}:{{=aim1_count}}', 'Aim:{{=aim2}}:{{=aim2_count}}', 'Keyword:{{=key1}}:{{=keyword1_count}}', 'Keyword:{{=key2}}:{{=keyword2_count}}', 'Keyword:{{=key3}}:{{=keyword3_count}}' ])
+            .Set('tooltips', [ '{{=aim1}}:{{=aim1_count}}' , '{{=aim2}}:{{=aim2_count}}', '{{=key1}}:{{=keyword1_count}}', '{{=key2}}:{{=keyword2_count}}', '{{=key3}}:{{=keyword3_count}}' ] )
+			.Set('title', '{{=T('My Search Analysis') }} {{=request.now.strftime('%B') }} {{=request.now.year}}' )
+			.Set('gutter.left', 35)
+            .Set('colors.alternate', true)
+            .Set('colors', [ ['purple'] ] )
+            .Set('linewidth', 5)
+            .Set('crosshairs', true)
+            .Set('crosshairs.snap', true)
+            .Set('shadow', true)
+            .Set('tickmarks', 'filledcircle')
+            .Set('ticksize', 7)
+			.Draw();
+	}
+</script>

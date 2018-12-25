@@ -1,0 +1,27 @@
+{{extend 'layout.html'}}
+{{block header}}
+<center style="background-color: #333; color:white; padding:30px">
+  <h1> My Search History
+  <p><img src="https://i.postimg.cc/9fgn8zmh/5bb714eb9ecb0f1f971a768d.png" alt="markbis" style="float:right;width:400px;height:400px;" controls /></p>
+</center>
+{{end}}
+
+{{ for x in rows:}}
+
+<hr/>
+<div class="rows">
+        <p class="lead">
+            <h4 style="color:SlateBlue;"> For your below search {{=x.f_tweet_count}} tweet(s) are analysed. </h4>
+        </p>
+
+        <p>
+            <b>My Marketing aim is: </b> {{=x.f_marketing_aim1}} & {{=x.f_marketing_aim2}}
+        </p>
+        <p>
+            <b>My Search Keys are: </b> {{=x.f_search_key1}} (Weight: {{=x.f_weight_1}}), {{=x.f_search_key2}} (Weight: {{=x.f_weight_2}}), {{=x.f_search_key3}} (Weight: {{=x.f_weight_3}}).
+        </p>
+
+</div>
+
+<hr/>
+{{pass}}
